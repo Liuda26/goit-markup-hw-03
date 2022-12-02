@@ -8,8 +8,10 @@
 /* колір фону герой та футер #2F303A */
 /* колір фону секції команда #F5F4FA */
 /* вторинний колір футер rgba(255, 255, 255, 0.6) */
+/* колір рамки #EEEEEE */
 
 :root {
+    --frame: #EEEEEE;
     --primary-text-color: #757575;
     --title-text-color: #212121;
     --accent-color: #2196F3;
@@ -18,7 +20,7 @@
     --back-hero: #2F303A;
     --back-team: #F5F4FA;
     --text-logo: #000000;
-    --secondary-text-foot: rgba(255, 255, 255, 0.6)
+    --secondary-text-foot: rgba(255, 255, 255, 0.6) 
 }
 /* стилі для index.html */
 body {
@@ -28,20 +30,34 @@ body {
 }
 /* header */
 
-ul {
-    margin-top: 0;
-    margin-bottom: 0;
+.header {
+     background-color: var(--secondary-color);
+     /* background-color: aquamarine */
+ }
+
+.list {
+    padding: 0;
+    margin: 0;
     list-style: none;
-} 
+}
 
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
+    width: 1230px;
     padding: 0 15px;
 }
 
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
 .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+
     color: var(--text-logo);
     font-family: Raleway, sans-serif;
     font-size: 26px;
@@ -53,12 +69,34 @@ ul {
     color: var(--accent-color);
 }
 
- .header {
-    background-color: var(--secondary-color);
-    /* background-color: aquamarine */
+.head-nav {
+    display: flex;
+    align-items: center;
 }
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
 /* site nav */
+
+.site-nav {
+    display: flex;
+    margin-left: 93px;
+}
+
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+/* .site-nav .item+.item {
+    margin-left: 50px;
+} */
+
 .site-nav .link {
+    display: block;
+    padding: 32px 0;
+
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -73,22 +111,34 @@ ul {
 .site-nav .link.current {
     color: var(--accent-color);
 }
+
+.auth-nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.auth-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+/* .auth-nav .item+.item {
+    margin-left: 40px;
+} */
+
 .auth-nav .link {
+    display: block;
+    padding: 32px 0;
+
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    text-decoration: none;
+    text-decoration: none; 
 }
 .auth-nav .link:hover,
 .auth-nav .link:focus {
     color: var(--accent-color);
-}
-.list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
 }
 
  /* hero */
@@ -101,6 +151,7 @@ ul {
     margin-top: 0;
     margin-bottom: 30px;
     padding-top: 200px;
+    
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -110,6 +161,7 @@ ul {
 .btn {
     background-color: var(--accent-color);
     color: var(--secondary-color);
+
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -128,14 +180,22 @@ ul {
     color: var(--accent-color);
 }
 /* main */
-/* .section {
-    margin-top: 0;
-    margin-bottom: 0;
- } */
+
+.benefits {
+    display: flex;
+    margin-top: 94px;
+    padding-left: 0;
+    justify-content: space-between;
+}
+
+.aside:not(:last-child) {
+    margin-right: 30px;
+}
 
 .section-title {
     margin-top: 0;
     margin-bottom: 50px;
+    padding-top: 94px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -169,9 +229,17 @@ ul {
 .text {
     margin-top: 0;
     margin-bottom: 0;
+
+    width: 270px;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
+}
+
+.us {
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
 }
 
 .team {
@@ -182,21 +250,33 @@ ul {
     font-size: 36px;
     line-height: 1.17;
 }
+
+.our {
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
+}
+
 .name {
-    margin-top: 30px;
+    margin-top: 0;
     margin-bottom: 10px;
+    padding-top: 30px;
+    
+    color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.19;
-    color: var(--title-text-color);
+    line-height: 1.19;  
 }
 .txt {
     background-color: var(--secondary-color);
+    text-align: center;
     letter-spacing: 0.03em;
 }
 .text-team {
     margin-top: 0;
     margin-bottom: 0;
+    padding-bottom: 30px;
+
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.19;
@@ -213,15 +293,17 @@ img {
 
 .footer {
     padding: 60px 0;
+
+    color: var(--secondary-color);
     background-color: var(--back-hero);
     font-size: 14px;
     line-height: 1.71;
-    color: var(--secondary-color);
 }
 
 .footer .logo-link {
     margin-top: 0;
     margin-bottom: 0;
+
     color: var(--secondary-color);
     font-family: Raleway, sans-serif;
     font-size: 26px;
@@ -231,6 +313,7 @@ img {
 
 .footer-list {
     margin-top: 28px;
+    padding-left: 0;
 }
 .add {
     font-style: normal;
@@ -242,14 +325,16 @@ img {
 
 .footer-list .link {
     margin-top: 0;
+
+    color: var(--secondary-color);
     font-size: 14px;
     line-height: 1.71;
-    color: var(--secondary-color);
     text-decoration: none;
 } 
 
 .footer-list .item-link {
     margin-top: 12px;
+
     color: var(--secondary-text-foot);
     text-decoration: none;
 }
@@ -264,7 +349,25 @@ img {
 }
 
 /* Портфоліо */
+
+.button-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+    padding-top: 94px;
+    padding-left: 0;
+}
+
+.btn-nav:not(:last-child) {
+    margin-right: 8px;
+}
+
 .button {
+    display: inline-block;
+    border-radius: 4px;
+    border: transparent;
+    padding: 6px 22px;
+    
     background-color: var(--back-team);
     color: var(--title-text-color);
     font-weight: 500;
@@ -274,11 +377,6 @@ img {
     font-family: inherit;
     text-align: center;
     min-width: 67px;
-
-    border-radius: 4px;
-    padding: 6px 22px;
-    display: inline-block;
-    border: transparent;
 }
 .button-nav .button:hover,
 .button-nav .button:focus {
@@ -286,21 +384,24 @@ img {
     background-color: var(--accent-color);
 }
 h2 {
+    color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    color: var(--title-text-color);
     letter-spacing: 0.06em;
 }
 
 .subtitle {
     margin-top: 20px;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .desk {
     margin-top: 4px;
     margin-bottom: 0;
+    padding-left: 24px;
+    padding-bottom: 20px;
     letter-spacing: 0.03em;
 }
 .list {
@@ -308,4 +409,27 @@ h2 {
     margin-bottom: 0;
     font-size: 16px;
     line-height: 1.88;
+}
+
+.photo {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 94px;
+}
+
+/* .gallery:nth-child(3n) {
+    margin-right: 0;
+} */
+
+.gallery {
+    margin-bottom: 30px;
+    border: 1px solid var(--frame);
+    width: 370px;
+ }
+
+.gallery:nth-last-child(-n + 3) {
+    margin-bottom: 0;
 }
