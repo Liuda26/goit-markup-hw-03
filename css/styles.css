@@ -12,6 +12,7 @@
 
 :root {
     --frame: #EEEEEE;
+    --secondary-frame: #ECECEC;
     --primary-text-color: #757575;
     --title-text-color: #212121;
     --accent-color: #2196F3;
@@ -31,8 +32,8 @@ body {
 /* header */
 
 .header {
-     background-color: var(--secondary-color);
-     /* background-color: aquamarine */
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-frame);
  }
 
 .list {
@@ -158,6 +159,10 @@ ul {
     letter-spacing: 0.06em;
     text-transform: uppercase;   
 }
+
+.retreat {
+    padding-bottom: 200px;
+}
 .btn {
     background-color: var(--accent-color);
     color: var(--secondary-color);
@@ -180,10 +185,15 @@ ul {
     color: var(--accent-color);
 }
 /* main */
+.section {
+    padding-top: 94px;
+}
 
+.section:first-child {
+    padding-bottom: 94px;
+}
 .benefits {
     display: flex;
-    margin-top: 94px;
     padding-left: 0;
     justify-content: space-between;
 }
@@ -195,7 +205,6 @@ ul {
 .section-title {
     margin-top: 0;
     margin-bottom: 50px;
-    padding-top: 94px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -243,7 +252,7 @@ ul {
 }
 
 .team {
-    padding: 94px 0;
+    
     background-color: var(--back-team);
     color: var(--title-text-color);
     font-weight: 700;
@@ -354,7 +363,6 @@ img {
     display: flex;
     justify-content: center;
     margin-bottom: 34px;
-    padding-top: 94px;
     padding-left: 0;
 }
 
@@ -394,7 +402,7 @@ h2 {
 .subtitle {
     margin-top: 20px;
     margin-bottom: 0;
-    text-align: center;
+    padding-left: 24px;
 }
 
 .desk {
@@ -417,7 +425,6 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-bottom: 94px;
 }
 
 /* .gallery:nth-child(3n) {
